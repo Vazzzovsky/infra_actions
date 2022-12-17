@@ -76,7 +76,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
           # Выполняет pull образа с DockerHub
-          sudo docker pull <имя-пользователя>/<имя-репозитория>
+          sudo docker pull mlisnevsky/practicum_infra_actions
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 3000:3000 <имя-пользователя>/<имя-репозитория>
+          sudo docker run --rm -d -p 3000:3000 mlisnevsky/practicum_infra_actions
