@@ -71,7 +71,7 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: mistigo.ru
-        username: root
+        username: gituser
         key: ${{ secrets.SSH_KEY }}
         passphrase: MCrypto1989
         script: |
