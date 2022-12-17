@@ -70,10 +70,10 @@ jobs:
     - name: executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER }}
+        host: mistigo.ru
+        username: mlisnevsky
         key: ${{ secrets.SSH_KEY }}
-        passphrase: ${{ secrets.PASSPHRASE }}
+        passphrase: SCrypto1989
         script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull mlisnevsky/practicum_infra_actions
