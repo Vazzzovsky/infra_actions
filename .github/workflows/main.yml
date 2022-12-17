@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Запуск actions checkout — готового скрипта 
+    # Запуск actions checkout — готового скрипта
     # для клонирования репозитория
     - uses: actions/checkout@v2
     - name: Set up Python
@@ -73,7 +73,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
-        passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
+        passphrase: ${{ secrets.PASSPHRASE }}
         script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull <имя-пользователя>/<имя-репозитория>
